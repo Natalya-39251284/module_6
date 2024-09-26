@@ -16,19 +16,19 @@ console.log(reverseWords);
 
 const wordsString = arrayWords.join("");
 
-const reverseString = reverseWords.join("");
+const reverseStrings = reverseWords.join("");
 
 console.log(word.toLowerCase());
 
-console.log(reverseString);
+console.log(reverseStrings);
 
-if (word.toLowerCase() === reverseString.toLocaleLowerCase()) {
+if (word.toLowerCase() === reverseStrings.toLocaleLowerCase()) {
     console.log("Палиндром");
  }
 
-const reverseString2 = word.split("Довод").reverse().join("Довод").toLocaleLowerCase();
+const reverseString = word.split("Довод").reverse().join("Довод").toLocaleLowerCase();
 
-if (word === reverseString2) {
+if (word === reverseStrings) {
   console.log("Палиндром");
 } else {
   console.log("Не палиндром");
@@ -37,8 +37,11 @@ if (word === reverseString2) {
 
 
 //Задание 6.6.2
-const arr = [1, 2, 3, 1, 5, 4, 2, 3, 5, 'they', 'don\'t', 'know', 'that', 'we', 'know', 'that', 'they', 'know' ];
-console.log(arr[1, 2, 3, 5, 4], ['they'], ['don\'t'], ['know'], ['that'], ['we']);
+const arr = [1, 2, 3, 1, 5, 4, 2, 3, 5, 'they', 'don\'t', 'know', 'that', 'we', 'know', 'that', 'they', 'know'];
+
+const uniqueArr = Array.from(new Set(arr));
+
+console.log(uniqueArr);
 
 //Задание 6.6.3
 const Number = prompt("Число");
