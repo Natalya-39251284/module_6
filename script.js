@@ -4,7 +4,7 @@
 //Задание 6.6.1
 // Палиндром
 
-let word = "Довод".toLocaleLowerCase();
+const word = "Довод".toLocaleLowerCase();
 
 const arrayWords = word.split("");
 
