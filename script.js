@@ -1,83 +1,69 @@
+// MODUL_7
+//1
 
-
-
-//Задание 6.6.1
-// Палиндром
-
-const word = "Довод".toLocaleLowerCase();
-
-const arrayWords = word.split("");
-
-console.log(arrayWords);
-
-const reverseWords = arrayWords.reverse();
-
-console.log(reverseWords);
-
-const wordsString = arrayWords.join("");
-
-const reverseStrings = reverseWords.join("");
-
-console.log(word.toLowerCase());
-
-console.log(reverseStrings);
-
-if (word.toLowerCase() === reverseStrings.toLocaleLowerCase()) {
-    console.log("Палиндром");
- }
-
-const reverseString = word.split("Довод").reverse().join("Довод").toLocaleLowerCase();
-
-if (word === reverseStrings) {
-  console.log("Палиндром");
-} else {
-  console.log("Не палиндром");
+function printInfo() {
+ console.log("Name: " + this.name + ", Age: " + this.age);
 }
 
+  const Person = {
+    name: "Lev",
+    age: 30
+  };
+  printInfo.call(Person);
 
+//2
 
-//Задание 6.6.2
-const arr = [1, 2, 3, 1, 5, 4, 2, 3, 5, 'they', 'don\'t', 'know', 'that', 'we', 'know', 'that', 'they', 'know'];
-
-const uniqueArr = Array.from(new Set(arr));
-
-console.log(uniqueArr);
-
-//Задание 6.6.3
-const Number = prompt("Число");
-for (let i = 0; i <= 5; i++) {
-    console.log(i);  
+function calculate(a, b, operator) {
+  switch (operator) {
+    case "+":
+      return a + b;
+    case "-":
+      return a - b;
+    case "*":
+      return a * b;
+  }
 }
+const obj = { a: 2, b: 3, operator: "+" };
+const result = calculate.apple(null, [obj.a, obj.b, obj.operator]);
+consol.log(result);
 
-//Задание 6.6.4
+//3
 
-const array = [
-    ["x", "o", "x"],
-    ["o", "x", "o"],
-    ["x", "o", "x"],
+const user = [
+  { name: "Иван", age: 17 },
+  { name: "Олег", age: 23 },
+  { name: "Егор", age: 25 },
 ];
-    
-for (let index = 0; index < array.length; index++) {
-console.log(array[index].join(" ")); 
-}
-//Задание 6.6.5
 
-const obj = {
-    some: 'some',
-    dom: 'text',
-    arr: [1, 2, 3, 4, 5],
-    tom: 'there'
+const userOver18 = user.filter((user) => user.age >= 18);
+
+const nameOfUserOver18 = userOver18.map((user) => user.name);
+console.log(userOver18);
+console.log(nameOfUserOver18);
+
+//4
+
+function setFullName(newName) {
+  this.FullName = newName;
+}
+let person = {
+  firstName: "Jhon",
+  lastName: "Smith",
 };
-  
-const arrValues = [];
-  
-for (const key in obj) {
-    const value = obj[key];
-  
-if (Array.isArray(value)) {
-      arrValues.push(value);
-} else {
-arrValues.push(value);
-}
-}
-  console.log(arrValues);
+
+let setPersonFullName = setFullName.bind(person);
+setPersonFullName("Jhon Smith");
+console.log(person.fullName);
+
+//5
+
+const arr=['html','css','html','js']
+ 
+ 
+const newArr=arr.filter((item)=>{
+ 
+ 
+return item
+ 
+})
+console.log(newArr);
